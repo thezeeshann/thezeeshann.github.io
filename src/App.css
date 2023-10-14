@@ -1,0 +1,24 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+
+::-moz-selection {
+  color: #000;
+  background-color: #25d1b5;
+}
+
+::selection {
+  color: #000;
+  background-color: #25d1b5;
+}
+a.active {
+  border-bottom: 4px solid #25d1b5;
+  font-weight: 700;
+}
