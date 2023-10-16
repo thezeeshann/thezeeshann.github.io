@@ -14,8 +14,8 @@ export default {
 
         primary: '#25d1b5',
 
-        // textPrimary: '#1b123d',
-        // textSecondary: '#353750',
+        textPrimary: '#1b123d',
+        textSecondary: '#353750',
 
         darkTextPrimary: '#cdd6f4',
         darkTextSecondary: '#bac2de',

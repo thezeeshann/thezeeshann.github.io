@@ -1,3 +1,4 @@
+import Projects from "./Projects";
 import Skills from "./Skills";
 import Qualification from "./Qualification";
 import img from "../assets/logo.png";
@@ -9,15 +10,15 @@ import {
 
 const Home = () => {
   return (
-    <section className="flex flex-col pt-20 max-w-2xl mx-auto " id="home">
+    <section className="flex flex-col mt-20 max-w-2xl mx-auto " id="home">
       {/* home */}
-      <div className="flex justify-center items-center ">
-        <div className="w-48 h-48 rounded-full shadow-xl border-4 border-primary mb-10 overflow-hidden">
+      <div className="flex justify-center items-center mb-10">
+        <div className="w-48 h-48 rounded-full shadow-xl border-4 border-primary overflow-hidden">
           <img className="rounded-full" src={img} alt="Zeeshan" />
         </div>
       </div>
       {/* intro */}
-      <div className="space-y-3 mb-10 ">
+      <div className="space-y-3 mb-10">
         <h1 className="text-5xl text-darkTextPrimary font-bold text-center">
           Hi, I'm Zeeshan
         </h1>
@@ -83,6 +84,7 @@ const Home = () => {
       {/* skills */}
       <Skills/>
       <Qualification/>
+      <Projects/>
     </section>
   );
 };
