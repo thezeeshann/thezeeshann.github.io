@@ -7,12 +7,12 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="flex flex-col mx-auto bg-darkBgPrimary w-full h-full">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      {/* <Footer/> */}
+      <div className="flex flex-col mx-auto bg-darkBgPrimary w-full h-full font-Poppins">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        {/* <Footer/> */}
       </div>
     </>
   );
