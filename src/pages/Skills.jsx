@@ -31,7 +31,7 @@ const Skills = () => {
             </span>
           </div>
           <div>
-            <span className='text-base text-textPrimary dark:text-darkTextPrimary md:text-lg font-bold mr-4'>
+            <span className='text-base text-textPrimary dark:text-darkTextPrimary md:text-lg xl:text-xl font-bold mr-4'>
               Databases:
             </span>
             <span className='text-sm md:text-base font-semibold'>
