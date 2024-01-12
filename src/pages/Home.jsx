@@ -1,6 +1,7 @@
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Qualification from "./Qualification";
+import Contact from "./Contact";
 import img from "../assets/logo.png";
 import {
   AiFillLinkedin,
@@ -19,10 +20,22 @@ const Home = () => {
       </div>
       {/* intro */}
       <div className="space-y-3 mb-10">
-        <h1 className="text-5xl text-darkTextPrimary font-bold text-center">
-          Hi, I'm Zeeshan
-        </h1>
+        <div className="flex flex-col justify-center items-center gap-y-1">
+          <h1 className="text-5xl text-darkTextPrimary font-bold">
+            Hi, I'm Zeeshan
+          </h1>
+          <p className="text-darkTextSecondary font-semibold text-base">
+           🚀 Ready to Transform Ideas into Digital Reality
+          </p>
+        </div>
         <p className="text-darkTextSecondary font-semibold pt-2 text-base mb-10">
+          Hello there👋 I'm Zeeshan, a dedicated and enthusiastic web developer
+          with a profound love for turning creative ideas into functional and
+          user-friendly digital experiences. My journey in the ever-evolving
+          realm of web development has equipped me with a versatile skill set
+          and a deep understanding of cutting-edge technologies.
+        </p>
+        <p className="text-darkTextSecondary font-semibold pt-2 text-base mb-8">
           I'm a{" "}
           <span className="text-darkTextPrimary font-bold">
             full stack web developer
@@ -30,12 +43,6 @@ const Home = () => {
           , I love working with web technologies and building web apps. I'm
           passionate about learning new skills that help me become a better
           developer.
-        </p>
-        <p className="text-darkTextSecondary font-semibold pt-2 text-base mb-8">
-          I have worked with HTML, CSS and JavaScript and have experience with
-          various JavaScript frameworks like React.js, Next.js Node.js and
-          Electron.js. I have experience in building REST APIs with Express. I
-          use these tools to build user-friendly web apps that function well.
         </p>
       </div>
       {/* connect */}
@@ -51,14 +58,11 @@ const Home = () => {
             rel="noreferrer"
           >
             <div className="border-[#9ca0b0]  rounded-lg w-14 h-12 border-4 cursor-pointer flex justify-center items-center hover:border-primary">
-              <AiFillGithub
-                className="text-darkTextPrimary hover:text-primary"
-                size={"2rem"}
-              />
+              <AiFillGithub className="text-darkTextPrimary" size={"2rem"} />
             </div>
           </a>
           <a
-            href="https://github.com/thezeeshann"
+            href="https://www.linkedin.com/in/thezeeshannn"
             target="_blank"
             rel="noreferrer"
           >
@@ -67,7 +71,7 @@ const Home = () => {
             </div>
           </a>
           <a
-            href="https://github.com/thezeeshann"
+            href="https://twitter.com/thezeeshann"
             target="_blank"
             rel="noreferrer"
           >
@@ -80,11 +84,10 @@ const Home = () => {
           </a>
         </div>
       </div>
-
-      {/* skills */}
-      <Skills/>
-      <Qualification/>
-      <Projects/>
+      <Skills />
+      <Qualification />
+      <Projects />
+      <Contact />
     </section>
   );
 };

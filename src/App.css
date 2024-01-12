@@ -22,3 +22,18 @@ a.active {
   border-bottom: 4px solid #25d1b5;
   font-weight: 700;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cdd6f4;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
