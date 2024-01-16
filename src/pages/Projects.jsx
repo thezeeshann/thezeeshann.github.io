@@ -5,8 +5,8 @@ const Projects = () => {
   return (
     <section className="mt-20 mb-10" id="project">
       <div className="text-center flex flex-col gap-y-2 mb-10">
-        <h1 className="text-darkTextPrimary text-5xl font-bold">Projects</h1>
-        <p className=" font-semibold text-darkTextPrimary text-base">
+        <h1 className="text-darkTextPrimary text-5xl sm:text-4xl font-bold">Projects</h1>
+        <p className=" font-semibold text-darkTextSecondary text-base sm:text-sm">
           Most Recent Work
         </p>
       </div>

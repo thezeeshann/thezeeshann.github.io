@@ -22,10 +22,10 @@ const Qualification = () => {
   return (
     <section className="mt-20" id="qualification">
       <div className="text-center flex flex-col gap-y-2 mb-10">
-        <h1 className="text-darkTextPrimary text-5xl font-bold">
+        <h1 className="text-darkTextPrimary text-5xl sm:text-4xl font-bold">
           Qualifications
         </h1>
-        <p className="font-semibold text-darkTextSecondary text-base">
+        <p className="font-semibold text-darkTextSecondary text-base sm:text-sm">
           My Educational Qualification & Work Experience
         </p>
       </div>
@@ -38,7 +38,7 @@ const Qualification = () => {
             <PiStudentBold
               size={"2rem"}
               className={`${
-                education === true ? "text-primary" : "text-darkTextPrimary"
+                education === true ? "text-primary" : "text-darkTextSecondary"
               }`}
             />
           </span>{" "}
@@ -74,47 +74,47 @@ const Qualification = () => {
       {education === true && (
         <div className="flex flex-col gap-y-5">
           <div className="flex flex-row gap-y-1 justify-between items-center">
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <span className="font-semibold text-darkTextPrimary text-base">
+              <span className="font-semibold text-darkTextSecondary text-base sm:text-sm">
               Bachelor's in Computer Application
               </span>
               <a
                 href="https://www.tmv.edu.in/"
                 target="_blank"
                 rel="noreferrer"
-                className="font-semibold text-darkTextSecondary text-sm"
+                className="font-semibold text-darkTextSecondary text-sm sm:text-xs"
               >
                 Tilak Maharashtra Vidyapeeth
               </a>
             </div>
-            <div className="flex flex-row justify-center items-center gap-x-1 text-darkTextSecondary">
-              <div className="font-semibold">
+            <div className="flex flex-row justify-center items-center gap-x-1 text-darkTextSecondary ">
+              <div className="font-semibold ">
                 <AiOutlineCalendar size={"1.25rem"} />{" "}
               </div>
-              <span className="font-semibold text-base">2021-2023</span>
+              <span className="font-semibold text-base sm:text-sm">2021-2023</span>
             </div>
           </div>
           <div className="flex flex-row gap-y-1 justify-between items-center">
             <div className="flex flex-col">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <span className="font-semibold text-darkTextPrimary text-base">
+              <span className="font-semibold text-darkTextPrimary text-base sm:text-sm">
               Master of Computer Application
               </span>
               <a
                 href="https://www.tmv.edu.in/"
                 target="_blank"
                 rel="noreferrer"
-                className="font-semibold text-darkTextSecondary text-sm"
+                className="font-semibold text-darkTextSecondary text-sm sm:text-xs"
               >
                 Tilak Maharashtra Vidyapeeth
               </a>
             </div>
             <div className="flex flex-row justify-center items-center gap-x-1 text-darkTextSecondary">
-              <div className="font-semibold">
+              <div className="font-semibold ">
                 <AiOutlineCalendar size={"1.25rem"} />{" "}
               </div>
-              <span className="font-semibold text-base">2023-2024</span>
+              <span className="font-semibold text-base sm:text-sm">2023-2024</span>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ const Qualification = () => {
           <div className="flex flex-row gap-y-1 justify-between items-center">
             <div className="flex flex-col">
               {/* eslint-disable-next-line react/no-unescaped-entities */}
-              <span className="font-semibold text-darkTextPrimary text-base">
+              <span className="font-semibold text-darkTextPrimary text-base sm:text-sm">
                 [work] - Comming soon....
               </span>
               <a
@@ -141,7 +141,7 @@ const Qualification = () => {
               <div className="font-semibold">
                 <AiOutlineCalendar size={"1.25rem"} />{" "}
               </div>
-              <span className="font-semibold text-lg">0000-0000</span>
+              <span className="font-semibold text-base sm:text-sm">0000-0000</span>
             </div>
           </div>
         </div>

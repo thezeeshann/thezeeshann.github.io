@@ -6,56 +6,55 @@ import {AiOutlineCalendar} from "react-icons/ai"
 const Contact = () => {
   return ( 
     <section className="mt-20 mb-10" id="contact">
+      
       <div className="text-center flex flex-col gap-y-2 mb-10">
-        <h1 className="text-darkTextPrimary text-5xl font-bold">Contact Me</h1>
-        <p className=" font-semibold text-darkTextPrimary text-base">
+        <h1 className="text-darkTextPrimary text-5xl sm:text-4xl font-bold">Contact Me</h1>
+        <p className=" font-semibold text-darkTextSecondary text-base sm:text-sm">
           Want to connect? My inbox is always open!
         </p>
       </div>
-      <div className="flex flex-row gap-x-5">
+      
+      <div className="sm:flex sm:flex-col flex flex-row gap-x-5 sm:mx-auto  sm:gap-y-14">
         {/* meeting */}
-        <div className="flex flex-col gap-y-5 w-full ">
-          <div className="flex flex-row gap-x-3">
+        <div className="flex flex-col  gap-y-5 w-full ">
+          <div className="flex flex-row gap-x-3  sm:flex sm:flex-row sm:items-center">
             <MdOutlineEmail
-              size={"2rem"}
-              className="text-primary cursor-pointer"
+              className="text-primary cursor-pointer text-[2rem] sm:text-[2.5rem]"
             />
-            <div className="flex flex-col">
-              <p className="text-darkTextPrimary font-bold">Email</p>
-              <span className="text-darkTextSecondary text-base">
+            <div className="flex flex-col ">
+              <p className="text-darkTextPrimary font-bold ">Email</p>
+              <span className="text-darkTextSecondary text-base ">
                 info.zeeshann@gmail.com
               </span>
             </div>
           </div>
           <div className="flex flex-row gap-x-3">
             <AiOutlineCalendar
-              size={"2rem"}
-              className="text-primary cursor-pointer"
+              className="text-primary cursor-pointer text-[2rem] sm:text-[2.5rem]"
             />
             <div className="flex flex-col">
               <p className="text-darkTextPrimary font-bold">Online Meet</p>
-              <span className="text-darkTextSecondary text-base">
+              <span className="text-darkTextSecondary text-base ">
                 Schedule an Online Meet
               </span>
             </div>
           </div>
           <div className="flex flex-row gap-x-3">
-            <FiTwitter size={"2rem"} className="text-primary cursor-pointer" />
+            <FiTwitter  className="text-primary cursor-pointer text-[2rem] sm:text-[2.5rem]" />
             <div className="flex flex-col">
-              <p className="text-darkTextPrimary font-bold">Twitter</p>
-              <span className="text-darkTextSecondary text-base">
+              <p className="text-darkTextPrimary font-bold sm:text-lg">Twitter</p>
+              <span className="text-darkTextSecondary text-base ">
                 @thezeeshann
               </span>
             </div>
           </div>
           <div className="flex flex-row gap-x-3">
             <IoLocationOutline
-              size={"2rem"}
-              className="text-primary cursor-pointer"
+              className="text-primary cursor-pointer text-[2rem] sm:text-[2.5rem]"
             />
             <div className="flex flex-col">
-              <p className="text-darkTextPrimary font-bold">Location</p>
-              <span className="text-darkTextSecondary text-base">
+              <p className="text-darkTextPrimary font-bold sm:text-lg">Location</p>
+              <span className="text-darkTextSecondary text-base ">
                 Mumbai, India
               </span>
             </div>
@@ -67,24 +66,22 @@ const Contact = () => {
           <form action="" method="post">
             <div className="flex flex-col gap-y-3">
               <div className="flex flex-col">
-                <label htmlFor="name" className="text-bgSecondary">
+                <label htmlFor="name" className="text-bgSecondary ">
                   Name
                 </label>
                 <input
                   type="text"
                   name="name"
-                  id=""
                   className="outline-none rounded-md p-2 bg-darkBgSecondary border-2 border-primary text-darkTextSecondary"
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="email" className="text-bgSecondary">
+                <label htmlFor="email" className="text-bgSecondary ">
                   Email
                 </label>
                 <input
                   type="email"
                   name="email"
-                  id=""
                   className="outline-none rounded-md p-2 bg-darkBgSecondary border-2 border-primary text-darkTextSecondary"
                 />
               </div>
@@ -94,7 +91,6 @@ const Contact = () => {
                 </label>
                 <textarea
                   name="message"
-                  id=""
                   cols="30"
                   rows="2"
                   className="outline-none rounded-md p-2 bg-darkBgSecondary border-2 border-primary text-darkTextSecondary"
@@ -102,7 +98,7 @@ const Contact = () => {
               </div>
             </div>
             <button className="mt-5 bg-primary rounded-lg py-2 px-4">
-              <span className="text-base text-black font-semibold tracking-normal">
+              <span className="text-base  text-black font-semibold tracking-normal">
                 {" "}
                 Send Message
               </span>
@@ -111,6 +107,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      
     </section>
   );
 };

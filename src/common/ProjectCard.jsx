@@ -7,12 +7,12 @@ const ProjectCard = ({ projectName, projectDescription, projectTechstack }) => {
         </h2>
       </div>
       <div>
-        <p className="mb-2 text-darkTextSecondary font-semibold">
+        <p className="mb-2 text-darkTextSecondary font-semibold sm:text-sm">
           {projectDescription}
         </p>
-        <p className="mb-4 text-darkTextSecondary font-semibold">
+        <p className="mb-4 text-darkTextSecondary font-semibold sm:text-sm">
           Tech Stack:{" "}
-          <span className="font-bold text-textPrimary dark:text-darkTextPrimary">
+          <span className="font-bold text-textPrimary dark:text-darkTextPrimary sm:text-sm">
             {projectTechstack}
           </span>
         </p>
