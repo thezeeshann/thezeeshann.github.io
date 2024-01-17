@@ -1,5 +1,5 @@
 import Button from "../common/Button";
-import ProjectCard from "../common/projectCard";
+import ProjectCard from "../common/ProjectCard"
 
 const Projects = () => {
   return (
