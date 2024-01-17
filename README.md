@@ -41,7 +41,7 @@
 ✔️ Contact Me\
 ✔️ Footer
 
-To view a live example, **[click here](https://thepranaygupta.github.io/)**
+To view a live example, **[click here](https://thezeeshann.netlify.app/)**
 
 ## Tools Used 🛠️
 
