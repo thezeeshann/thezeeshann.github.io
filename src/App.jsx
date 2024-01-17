@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <main className=" border-2  xl:border-blue-500 lg:border-red-500 md:border-green-500  sm:border-yellow-500 flex flex-col mx-auto bg-darkBgPrimary w-full h-full font-Poppins">
+      <main className="flex flex-col mx-auto bg-darkBgPrimary w-full h-full font-Poppins">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
