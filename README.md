@@ -6,11 +6,11 @@
   <a href="https://github.com/thezeeshann/thezeeshann.github.io">thezeeshann.github.io</a>
 </h2>
 
-<div align="center">
-<!--   <a href="https://thepranaygupta.github.io/">
-    <img alt="Mockup" src="https://user-images.githubusercontent.com/64855541/148080556-ec9d5062-1092-4bd4-ba12-82a153e32985.png" />
-  </a> -->
-</div>
+
+
+![Course_Creator_Laptop_iphone_mockup_instagram_post__1_-removebg](https://github.com/thezeeshann/thezeeshann.github.io/assets/88139550/824505ef-ef71-4cbb-80d4-3547b33064ab)
+
+
 
 <br/>
 <!--
