@@ -12,20 +12,20 @@ import { BiLogoTwitter } from "react-icons/bi";
 const Home = () => {
   const el = useRef(null);
 
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Full Stack", "Frontend", "Backend"],
-      startDelay: 300,
-      typeSpeed: 130,
-      backSpeed: 100,
-      backDelay: 100,
-      loop: true,
-      smartBackspace: true,
-    });
-    return () => {
-      typed.destroy();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const typed = new Typed(el.current, {
+  //     strings: ["Full Stack", "Frontend", "Backend"],
+  //     startDelay: 300,
+  //     typeSpeed: 130,
+  //     backSpeed: 100,
+  //     backDelay: 100,
+  //     loop: true,
+  //     smartBackspace: true,
+  //   });
+  //   return () => {
+  //     typed.destroy();
+  //   };
+  // }, []);
 
   return (
     <section
@@ -33,31 +33,31 @@ const Home = () => {
       id="home"
     >
       {/* home */}
-      <div className="flex justify-center items-center mb-10 ">
-        <div className="w-48 h-48 rounded-full shadow-xl border-4 border-primary overflow-hidden">
+      {/* <div className="flex items-center justify-center mb-10 ">
+        <div className="w-48 h-48 overflow-hidden border-4 rounded-full shadow-xl border-primary">
           <img className="rounded-full" src={img} alt="Zeeshan" />
         </div>
-      </div>
+      </div> */}
       {/* intro */}
-      <div className="space-y-3 mb-10">
-        <div className="flex flex-col justify-center items-center gap-y-1">
-          <h1 className="text-5xl sm:text-4xl text-darkTextPrimary font-bold">
+      <div className="mb-10 space-y-3">
+        <div className="flex flex-col items-center justify-center gap-y-1">
+          <h1 className="text-5xl font-bold sm:text-4xl text-darkTextPrimary">
             Hi, I'm Zeeshan
           </h1>
-          <p className="text-darkTextSecondary font-semibold text-lg sm:text-base">
+          {/* <p className="text-lg font-semibold text-darkTextSecondary sm:text-base">
             i am a <span ref={el}></span> Developer
-          </p>
+          </p> */}
         </div>
-        <p className="text-darkTextSecondary font-semibold pt-2 text-base sm:text-sm mb-10">
+        <p className="pt-2 mb-10 text-base font-semibold text-darkTextSecondary sm:text-sm">
           Hello there👋 I'm Zeeshan, a dedicated and enthusiastic web developer
           with a profound love for turning creative ideas into functional and
           user-friendly digital experiences. My journey in the ever-evolving
           realm of web development has equipped me with a versatile skill set
           and a deep understanding of cutting-edge technologies.
         </p>
-        <p className="text-darkTextSecondary font-semibold pt-2 text-base sm:text-sm mb-8">
+        <p className="pt-2 mb-8 text-base font-semibold text-darkTextSecondary sm:text-sm">
           I'm a{" "}
-          <span className="text-darkTextPrimary font-bold">
+          <span className="font-bold text-darkTextPrimary">
             full stack web developer
           </span>
           , I love working with web technologies and building web apps. I'm
@@ -67,7 +67,7 @@ const Home = () => {
       </div>
       {/* connect */}
       <div className="">
-        <p className="text-darkTextPrimary text-xl sm:text-base font-bold">
+        <p className="text-xl font-bold text-darkTextPrimary sm:text-base">
           {" "}
           Connect with me:{" "}
         </p>

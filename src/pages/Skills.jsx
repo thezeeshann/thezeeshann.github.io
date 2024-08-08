@@ -1,54 +1,348 @@
+import { useState } from "react";
+import { FaCode, FaCodeBranch } from "react-icons/fa";
+import { GoTools } from "react-icons/go";
 
 const Skills = () => {
+  const [open, setOpen] = useState({
+    language: true,
+    library: false,
+    tools: false,
+  });
 
+  const { language, library, tools } = open;
+
+  const handleToggle = (type) => {
+    if (type === "language") {
+      setOpen({ language: true, library: false, tools: false });
+    } else if (type === "library") {
+      setOpen({ language: false, library: true, tools: false });
+    } else {
+      setOpen({ language: false, library: false, tools: true });
+    }
+  };
 
   return (
-    <section className="mt-20" id="skills">
-      
-      <div className="text-center flex flex-col gap-y-2 mb-10">
-        <h1 className="text-darkTextPrimary text-5xl sm:text-4xl font-bold">Skills</h1>
-        <p className=" font-semibold text-darkTextPrimary text-base sm:text-sm">
-          My Technical Skills 
+    <section className="mt-20 " id="skills">
+      <div className="flex flex-col mb-10 text-center gap-y-2">
+        <h1 className="text-5xl font-bold text-darkTextPrimary sm:text-4xl">
+          Skills
+        </h1>
+        <p className="text-base font-semibold text-darkTextPrimary sm:text-sm">
+          My Technical Skills
         </p>
       </div>
 
-
-      <div className='flex flex-col gap-2 text-darkTextSecondary '>
-          <div className="">
-            <span className='text-lg sm:text-base text-darkTextPrimary font-bold mr-4'>
-              Programming Languages:
-            </span>
-            <span className='text-base sm:text-sm font-semibold'>
-              JavaScript / TypeScript, Python
-            </span>
-          </div>
-          <div>
-            <span className='text-lg sm:text-base text-darkTextPrimary font-bold mr-4'>
-            Libraries & Frameworks:
-            </span>
-            <span className='text-base md:text-base sm:text-sm font-semibold'>
-            React.js, Next.js, Node.js, Express.js, Django, Tailwind CSS, Bootstrap
-            </span>
-          </div>
-          <div>
-            <span className='text-base sm:text-base text-textPrimary dark:text-darkTextPrimary md:text-lg xl:text-lg font-bold mr-4'>
-              Databases:
-            </span>
-            <span className='text-base md:text-base sm:text-sm font-semibold'>
-              MongoDb, MYSQL, PostgreSQL
-            </span>
-          </div>
-          <div>
-            <span className='text-lg sm:text-base text-textPrimary dark:text-darkTextPrimary md:text-lg font-bold mr-4'>
-            Tools & Platforms:
-            </span>
-            <span className='text-base md:text-base font-semibold sm:text-sm'>
-              Git, Github, Postman API, Linux, AWS, Netlify, Vercel
-            </span>
-          </div>
+      <div className="flex flex-row justify-center mb-10 gap-x-10">
+        <div
+          className="flex flex-row items-center cursor-pointer gap-x-3"
+          onClick={() => handleToggle("language")}
+        >
+          <FaCode
+            size={"2rem"}
+            className={`${
+              language === true ? "text-primary" : "text-darkTextSecondary"
+            }`}
+          />
+          <span
+            className={`${
+              language === true ? "text-primary" : "text-darkTextSecondary"
+            } font-semibold text-base`}
+          >
+            Languages
+          </span>
         </div>
+        <hr className="bg-darkTextSecondary w-[1.5px] h-[50px] border-0 border-primary" />
+        <div
+          className="flex flex-row items-center cursor-pointer gap-x-3"
+          onClick={() => handleToggle("library")}
+        >
+          <FaCodeBranch
+            size={"2rem"}
+            className={`${
+              library === true ? "text-primary" : "text-darkTextPrimary"
+            }`}
+          />
+          <span
+            className={`${
+              library === true ? "text-primary" : "text-darkTextSecondary"
+            } font-semibold text-base`}
+          >
+            Libraries & Frameworks
+          </span>
+        </div>
+        <hr className="bg-darkTextSecondary w-[1.5px] h-[50px] border-0 border-primary" />
+        <div
+          className="flex flex-row items-center cursor-pointer gap-x-3"
+          onClick={() => handleToggle("tools")}
+        >
+          <GoTools
+            size={"2rem"}
+            className={`${
+              tools === true ? "text-primary" : "text-darkTextPrimary"
+            }`}
+          />
+          <span
+            className={`${
+              tools === true ? "text-primary" : "text-darkTextSecondary"
+            } font-semibold text-base`}
+          >
+            Tools & Platforms
+          </span>
+        </div>
+      </div>
 
+      <div className="flex flex-row items-center justify-center gap-2 gap-x-6 text-darkTextSecondary">
+        {language === true && (
+          <>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=html"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                HTML
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=css"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Css
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=js"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-darkTextPrimary">Javascript</p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=ts"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-darkTextPrimary">Typescript</p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=cpp"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                C++
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=python"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Python
+              </p>
+            </div>
+          </>
+        )}
 
+        {library === true && (
+          <>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=tailwind"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Tailwind
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=react"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                React
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=redux"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Redux
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=next"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Next
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=nodejs"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Node
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=express"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Express
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=django"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Django
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=mongodb"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                MongoDB
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=postgres"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Postgres
+              </p>
+            </div>
+          </>
+        )}
+
+        {tools === true && (
+          <>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=git"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Git
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=github"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Github
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=linux"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Linux
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=aws"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                AWS
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=docker"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Docker
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=postman"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Postman
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=vercel"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Vercel
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=netlify"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                Netlify
+              </p>
+            </div>
+            <div className="items-center justify-center rounded-md max-w-max ">
+              <img
+                src="https://skillicons.dev/icons?i=vscode"
+                alt="logo"
+                className="w-[45px] h-[45px] cursor-pointer mx-auto"
+              />
+              <p className="mt-1 text-sm text-center text-darkTextPrimary">
+                VsCode
+              </p>
+            </div>
+          </>
+        )}
+      </div>
     </section>
   );
 };
