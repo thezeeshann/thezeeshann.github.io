@@ -6,21 +6,8 @@
   <a href="https://github.com/thezeeshann/thezeeshann.github.io">thezeeshann.github.io</a>
 </h2>
 
-<div align="center">
-<!--   <a href="https://thepranaygupta.github.io/">
-    <img alt="Mockup" src="https://user-images.githubusercontent.com/64855541/148080556-ec9d5062-1092-4bd4-ba12-82a153e32985.png" />
-  </a> -->
-</div>
+![Course_Creator_Laptop_iphone_mockup_instagram_post__1_-removebg](https://github.com/thezeeshann/thezeeshann.github.io/assets/88139550/824505ef-ef71-4cbb-80d4-3547b33064ab)
 
-<br/>
-<!--
-<a href="https://github.com/thepranaygupta/thepranaygupta.github.io"><img src="https://sloc.xyz/github/thezeeshann/thezeeshann.github.io" alt="Total lines"></a>
-<a href="https://github.com/thepranaygupta/thepranaygupta.github.io"><img src="https://visitor-badge.laobi.icu/badge?page_id=thepranaygupta/thepranaygupta.github.io" alt="Number of Visitors"></a>
-<a href="https://github.com/thepranaygupta/thepranaygupta.github.io/stargazers"><img src="https://img.shields.io/github/stars/thepranaygupta/thepranaygupta.github.io" alt="github stars"></a>
-<a href="https://github.com/thepranaygupta/thepranaygupta.github.io/network/members"><img src="https://img.shields.io/github/forks/thepranaygupta/thepranaygupta.github.io" alt="github forks"></a>
-<a href="https://thepranaygupta.github.io/"><img src="https://img.shields.io/badge/website-up-yellow" alt="website up"></a>
-<a href="https://www.linkedin.com/in/thepranaygupta/"><img src="https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg" alt="linkedin"></a>
--->
 </div>
 
 ⭐ Star this repo on GitHub — it helps!
@@ -41,7 +28,7 @@
 ✔️ Contact Me\
 ✔️ Footer
 
-To view a live example, **[click here](https://thepranaygupta.github.io/)**
+To view a live example, **[click here](https://thezeeshann.github.io/)**
 
 ## Tools Used 🛠️
 
