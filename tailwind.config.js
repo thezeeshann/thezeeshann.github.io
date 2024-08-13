@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        buttonheartbeat: "buttonheartbeat 2s infinite ease-in-out",
+      },
       colors: {
         bgPrimary: "#eff1f5",
         bgSecondary: "#ccd0da",
@@ -25,6 +28,22 @@ export default {
         md: { min: "650px", max: "768px" },
         lg: { min: "769px", max: "1024px" },
         xl: { min: "1025px", max: "1600px" },
+      },
+      keyframes: {
+        buttonheartbeat: {
+          "0%": {
+            "box-shadow": '0 0 0 0 theme("colors.red.500")',
+            transform: "scale(1)",
+          },
+          "50%": {
+            "box-shadow": '0 0 0 7px theme("colors.red.500/0")',
+            transform: "scale(1.05)",
+          },
+          "100%": {
+            "box-shadow": '0 0 0 0 theme("colors.red.500/0")',
+            transform: "scale(1)",
+          },
+        },
       },
     },
   },
