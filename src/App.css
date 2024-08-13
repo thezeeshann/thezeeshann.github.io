@@ -8,7 +8,6 @@ html {
   scroll-behavior: smooth !important;
 }
 
-
 ::-moz-selection {
   color: #000;
   background-color: #25d1b5;
@@ -37,9 +36,6 @@ a.active {
 ::-webkit-scrollbar-track {
   background: #888;
 }
-
-
-
 
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .header-backdrop {
