@@ -6,8 +6,6 @@
   <a href="https://github.com/thezeeshann/thezeeshann.github.io">thezeeshann.github.io</a>
 </h2>
 
-![Course_Creator_Laptop_iphone_mockup_instagram_post__1_-removebg](https://github.com/thezeeshann/thezeeshann.github.io/assets/88139550/824505ef-ef71-4cbb-80d4-3547b33064ab)
-
 </div>
 
 ⭐ Star this repo on GitHub — it helps!
@@ -15,8 +13,8 @@
 ## Features 📋
 
 ⚡️ Fully Responsive\
-⚡️ Valid HTML5 & Tailwind CSS\
-⚡️ Typing animation\
+⚡️ Valid HTML5 & Tailwind CSS
+
 
 
 ## Sections 📚
@@ -26,7 +24,6 @@
 ✔️ Qualifications \
 ✔️ Projects\
 ✔️ Contact Me\
-✔️ Footer
 
 To view a live example, **[click here](https://thezeeshann.github.io/)**
 
