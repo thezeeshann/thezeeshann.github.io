@@ -7,17 +7,72 @@ export const projects = [
     id: 1,
     name: "Ecommerce Application",
     description:
-      "Developed a full-featured Ecommerce web application using the MERN stack. Used Tailwind CSS, and Shadcn/UI for styling for a seamless user experience",
-    techstack: "React js Node js",
-    github: "https://github.com/thezeeshann",
-    live: "https://github.com/thezeeshann",
+      "Developed a full-featured Ecommerce web application using the MERN stack.",
+    techstacks: [
+      {
+        id: 1,
+        name: "Tailwind CSS",
+      },
+      {
+        id: 2,
+        name: "Shadcn ui",
+      },
+      {
+        id: 3,
+        name: "Javascript",
+      },
+      {
+        id: 4,
+        name: "React.js",
+      },
+      {
+        id: 5,
+        name: "Redux",
+      },
+      {
+        id: 6,
+        name: "RTK Query",
+      },
+
+      {
+        id: 7,
+        name: "Node.js",
+      },
+      {
+        id: 8,
+        name: " Express.js",
+      },
+      {
+        id: 9,
+        name: "MongoDB",
+      },
+    ],
+    github: "https://github.com/thezeeshann/ecommerce-mern",
+    live: "",
   },
   {
     id: 2,
-    name: "Ecommerce asdfsd",
+    name: "Game Hub",
     description:
-      "Developed a full-featured Ecommerce web application using the MERN stack. Used Tailwind CSS, and Shadcn/UI for styling for a seamless user experience",
-    techstack: "React js Node js",
-    github: "https://github.com/thezeeshann",
+      "This project is a clone of the popular gaming platform RAWG.io. RAWG.io is a platform that allows users to discove favorite games.",
+    techstacks: [
+      {
+        id: 1,
+        name: "Tailwind CSS",
+      },
+      {
+        id: 2,
+        name: "Typescript",
+      },
+      {
+        id: 3,
+        name: "React.js",
+      },
+      {
+        id: 4,
+        name: "RAWG.io Api",
+      },
+    ],
+    github: "https://github.com/thezeeshann/game-hub",
   },
 ];
