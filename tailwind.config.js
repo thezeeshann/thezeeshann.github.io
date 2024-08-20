@@ -32,15 +32,15 @@ export default {
       keyframes: {
         buttonheartbeat: {
           "0%": {
-            "box-shadow": '0 0 0 0 theme("colors.red.500")',
+            "box-shadow": '0 0 0 0 theme("colors.darkTextPrimary")',
             transform: "scale(1)",
           },
           "50%": {
-            "box-shadow": '0 0 0 7px theme("colors.red.500/0")',
+            "box-shadow": '0 0 0 7px theme("colors.darkTextPrimary/0")',
             transform: "scale(1.05)",
           },
           "100%": {
-            "box-shadow": '0 0 0 0 theme("colors.red.500/0")',
+            "box-shadow": '0 0 0 0 theme("colors.darkTextPrimary/0")',
             transform: "scale(1)",
           },
         },
