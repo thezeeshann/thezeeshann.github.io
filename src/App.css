@@ -8,20 +8,6 @@ html {
   scroll-behavior: smooth !important;
 }
 
-::-moz-selection {
-  color: #000;
-  background-color: #25d1b5;
-}
-
-::selection {
-  color: #000;
-  background-color: #25d1b5;
-}
-a.active {
-  /* border-bottom: 2px solid #25d1b5;
-  font-weight: 700; */
-  color: #25d1b5;
-}
 
 ::-webkit-scrollbar {
   width: 0.6rem;
