@@ -19,11 +19,11 @@
 
 ## Sections 📚
 
-✔️ Home\
+✔️ Home \
 ✔️ Skills \
 ✔️ Qualifications \
 ✔️ Projects\
-✔️ Contact Me\
+✔️ Contact Me
 
 To view a live example, **[click here](https://thezeeshann.github.io/)**
 
