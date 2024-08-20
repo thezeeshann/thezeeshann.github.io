@@ -1,6 +1,7 @@
+import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Error from "./components/Error";
+const Home = lazy(() => import("./components/Home"));
+const Error = lazy(() => import("./components/Error"));
 import "./App.css";
 
 function App() {
