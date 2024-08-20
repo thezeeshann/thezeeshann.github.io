@@ -1,13 +1,14 @@
+import { lazy } from "react";
+const Skills = lazy(() => import("./Skills"));
+const Footer = lazy(() => import("./Footer"));
+const Projects = lazy(() => import("./Projects"));
+const Qualification = lazy(() => import("./Qualification"));
 import { Link } from "react-router-dom";
-import { AiFillGithub } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import { BiLogoTwitter } from "react-icons/bi";
-import { useUserData } from "../lib/useData";
-import Qualification from "./Qualification";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import Footer from "./Footer";
 import { userMetaData } from "../lib/data";
+import { useUserData } from "../lib/useData";
+import { AiFillGithub } from "react-icons/ai";
+import { BiLogoTwitter } from "react-icons/bi";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Home = () => {
   const { userData } = useUserData();
@@ -23,6 +24,7 @@ const Home = () => {
             <img
               src={userData.avatar_url}
               alt={userData.name}
+              loading="lazy"
               className="rounded-full w-[42px] h-[42px]  animate-buttonheartbeat"
             />
             <div>

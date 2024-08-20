@@ -5,12 +5,12 @@ import { AiOutlineCalendar } from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <section className="mt-20 mb-10" id="contact">
+    <section className="mt-20 mb-10 " id="contact">
       <div className="flex flex-col mb-10 text-center gap-y-2">
         <h1 className="text-5xl font-bold text-darkTextPrimary sm:text-4xl">
           Contact Me
         </h1>
-        <p className="text-base font-semibold  text-darkTextSecondary sm:text-sm">
+        <p className="text-base font-semibold text-darkTextSecondary sm:text-sm">
           Want to connect? My inbox is always open!
         </p>
       </div>

@@ -1,9 +1,9 @@
 const Skills = () => {
   return (
     <section className="mt-8 mb-10 " id="skills">
-      <div className="flex flex-col mb-10 gap-y-2">
-        <h1 className="text-xl font-semibold text-darkTextPrimary sm:text-4xl ">
-          Skills 🧠
+      <div className="flex flex-col mb-6 gap-y-2">
+        <h1 className="text-xl font-semibold text-darkTextPrimary ">
+          Stack
         </h1>
       </div>
 

@@ -9,16 +9,21 @@ const Footer = () => {
         out to me.
       </p>
       <div className="flex flex-row gap-x-4">
-        <p className="text-[14px] hover:underline cursor-pointer text-darkTextSecondary">
+        <a
+          target="_blank"
+          href="mailto:info.zeeshann@gmailc.com"
+          rel="noreferrer"
+          className="text-[14px] hover:underline cursor-pointer text-darkTextSecondary"
+        >
           Email
-        </p>
+        </a>
         <p className="text-[14px] hover:underline cursor-pointer text-darkTextSecondary">
-          <Link to="https://github.com/thezeeshann" target="_blank">
+          <Link rel="preconnect" to="https://github.com/thezeeshann" target="_blank">
             Github
           </Link>
         </p>
         <span className="cursor-pointer">
-          <Link to="https://twitter.com/thezeeshann" target="_blank" >
+          <Link to="https://twitter.com/thezeeshann" target="_blank">
             <FaXTwitter color="#cdd6f4" size={18} className="hover:scale-90" />
           </Link>
         </span>
