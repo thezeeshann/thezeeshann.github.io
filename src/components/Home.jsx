@@ -1,9 +1,8 @@
-import { lazy } from "react";
-const Skills = lazy(() => import("./Skills"));
-const Footer = lazy(() => import("./Footer"));
-const Projects = lazy(() => import("./Projects"));
-const Qualification = lazy(() => import("./Qualification"));
 import { Link } from "react-router-dom";
+import Skills from "./Skills";
+import Footer from "./Footer";
+import Projects from "./Projects";
+import Qualification from "./Qualification";
 import { userMetaData } from "../lib/data";
 import { useUserData } from "../lib/useData";
 import { AiFillGithub } from "react-icons/ai";
