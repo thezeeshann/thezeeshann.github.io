@@ -2,9 +2,7 @@ const Skills = () => {
   return (
     <section className="mt-8 mb-10 " id="skills">
       <div className="flex flex-col mb-6 gap-y-2">
-        <h1 className="text-xl font-semibold text-darkTextPrimary ">
-          Stack
-        </h1>
+        <h1 className="text-xl font-semibold text-darkTextPrimary ">Stack</h1>
       </div>
 
       <div className="flex flex-col gap-y-4">
@@ -23,17 +21,8 @@ const Skills = () => {
             Backend:
           </p>
           <p className="text-darkTextSecondary text-[14px]">
-            Node.js, Express.js, Django, MongodDB, PostgreSQL, Prisma ORM,
-            NextAuth.js
-          </p>
-        </div>
-
-        <div className="flex flex-row gap-x-2">
-          <p className="text-[15px] font-semibold text-darkTextPrimary">
-            Others:
-          </p>
-          <p className="text-darkTextSecondary text-[14px]">
-            C++, Python, React Native, Expo
+            Node.js, Express.js, Django, MongodDB, PostgreSQL, MySQL, Prisma
+            ORM, NextAuth.js
           </p>
         </div>
 
@@ -43,6 +32,15 @@ const Skills = () => {
           </p>
           <p className="text-darkTextSecondary text-[14px]">
             Git, Github, Postman Api, VsCode, Linux, Aws, Docker
+          </p>
+        </div>
+
+        <div className="flex flex-row gap-x-2">
+          <p className="text-[15px] font-semibold text-darkTextPrimary">
+            Others:
+          </p>
+          <p className="text-darkTextSecondary text-[14px]">
+          Python, React Native, Expo, Socket.IO, WebRTC
           </p>
         </div>
       </div>

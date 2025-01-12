@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Skills from "./Skills";
 import Footer from "./Footer";
 import Projects from "./Projects";
-import Qualification from "./Qualification";
 import { userMetaData } from "../lib/data";
 import { useUserData } from "../lib/useData";
 import { AiFillGithub } from "react-icons/ai";
@@ -67,7 +66,6 @@ const Home = () => {
         </p>
       </div>
       <Skills />
-      <Qualification />
       <Projects />
       <Footer />
     </section>
