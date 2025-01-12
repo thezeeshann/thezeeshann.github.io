@@ -1,5 +1,5 @@
 export const userMetaData = {
-  bio: "focused on creating innovative and modern web apps. With a passion for continuous improvement, I thrive on bringing creative ideas to life through technology.",
+  bio: "focused on creating innovative and modern web & mobile apps. With a passion for continuous improvement, I thrive on bringing creative ideas to life through technology.",
 };
 
 export const projects = [
