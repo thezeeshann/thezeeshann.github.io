@@ -15,18 +15,18 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cdd6f4;
+  background: #4c4f69;
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: #888;
+  background: #ccd0da;
 }
 
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-  .header-backdrop {
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-  }
+.dark ::-webkit-scrollbar-thumb {
+  background: #cdd6f4;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #888;
 }
