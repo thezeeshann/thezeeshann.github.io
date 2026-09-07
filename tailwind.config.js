@@ -5,27 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        bgPrimary: "#eff1f5",
-        bgSecondary: "#ccd0da",
-        darkBgPrimary: "#181825",
-        darkBgSecondary: "#313244",
-
-        primary: "#25d1b5",
-
-        textPrimary: "#4c4f69",
-        textSecondary: "#5c5f77",
-
-        darkTextPrimary: "#cdd6f4",
-        darkTextSecondary: "#bac2de",
+        bg: "hsl(var(--bg) / <alpha-value>)",
+        fg: "hsl(var(--fg) / <alpha-value>)",
+        muted: "hsl(var(--muted) / <alpha-value>)",
+        border: "hsl(var(--border) / <alpha-value>)",
+        subtle: "hsl(var(--subtle) / <alpha-value>)",
       },
       fontFamily: {
-        Inter: ["Inter", "sans-serif"],
-      },
-      screens: {
-        sm: { min: "320px", max: "649px" },
-        md: { min: "650px", max: "768px" },
-        lg: { min: "769px", max: "1024px" },
-        xl: { min: "1025px", max: "1600px" },
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
     },
   },

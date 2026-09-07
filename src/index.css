@@ -1,5 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    color-scheme: light;
+
+    --bg: 0 0% 100%;
+    --fg: 0 0% 8%;
+    --muted: 0 0% 44%;
+
+    --border: 0 0% 85%;
+    /* Edges are held back in dark mode so they read as structure, not
+       content — the same treatment as the experience rail. */
+    --border-alpha: 1;
+    --rail-alpha: 0.5;
+    --subtle: 0 0% 96%;
+
+    --dot: 0 0% 0%;
+    --dot-opacity: 0.05;
+
+    /* "Currently here" indicator — the one colour in the palette. */
+    --live: 158 64% 42%;
+
+    --scrollbar-thumb: 0 0% 75%;
+    --scrollbar-track: 0 0% 96%;
+  }
+
+  .dark {
+    color-scheme: dark;
+
+    --bg: 0 0% 0%;
+    --fg: 0 0% 93%;
+    --muted: 0 0% 55%;
+
+    --border: 0 0% 18%;
+    --border-alpha: 0.5;
+    --rail-alpha: 0.25;
+    --subtle: 0 0% 7%;
+
+    --dot: 0 0% 100%;
+    --dot-opacity: 0.06;
+
+    --live: 158 64% 52%;
+
+    --scrollbar-thumb: 0 0% 22%;
+    --scrollbar-track: 0 0% 5%;
+  }
+
+  /* The page background lives on the document itself, so it can never
+     depend on a wrapper element rendering. */
+  html {
+    background-color: hsl(var(--bg));
+  }
+
+  body {
+    background-color: hsl(var(--bg));
+    color: hsl(var(--fg));
+  }
+}

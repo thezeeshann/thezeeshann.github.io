@@ -9,9 +9,10 @@ const ThemeToggle = () => {
       type="button"
       onClick={toggleTheme}
       aria-label="Toggle color theme"
-      className="flex items-center justify-center w-8 h-8 transition-colors border rounded-md border-bgSecondary dark:border-darkBgSecondary text-textSecondary dark:text-darkTextSecondary hover:text-primary"
+      title={theme === "dark" ? "Switch to light" : "Switch to dark"}
+      className="flex h-8 w-8 items-center justify-center rounded-full hairline text-muted transition-colors hover:bg-subtle hover:text-fg"
     >
-      {theme === "dark" ? <FiSun size={16} /> : <FiMoon size={16} />}
+      {theme === "dark" ? <FiSun size={14} /> : <FiMoon size={14} />}
     </button>
   );
 };

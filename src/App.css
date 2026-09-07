@@ -1,32 +1,121 @@
-* {
-  padding: 0%;
-  margin: 0%;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Faint fixed dot grid behind the whole page. */
+.dot-grid {
+  background-image: radial-gradient(
+    hsl(var(--dot) / var(--dot-opacity)) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+/* Visible focus ring that works on both backgrounds. */
+:focus-visible {
+  outline: 2px solid hsl(var(--fg));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 
 ::-webkit-scrollbar {
   width: 0.6rem;
-  border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4c4f69;
+  background: hsl(var(--scrollbar-thumb));
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ccd0da;
+  background: hsl(var(--scrollbar-track));
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: #cdd6f4;
+/* Horizontal scroll containers (e.g. the contribution graph on mobile)
+   scroll without showing a bar. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.dark ::-webkit-scrollbar-track {
-  background: #888;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Live "currently here" dot: a steady core with an expanding halo. */
+.live-dot {
+  position: relative;
+  display: inline-block;
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 9999px;
+  background-color: hsl(var(--live));
+}
+
+.live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: hsl(var(--live));
+  animation: live-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes live-pulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot::after {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Every card/pill/chip edge, in both themes. */
+.hairline {
+  border-width: 1px;
+  border-style: solid;
+  border-color: hsl(var(--border) / var(--border-alpha));
+}
+
+/* Long structural lines — the experience rail and the footer divider — are
+   held back further than a card edge. An unbroken full-length line reads
+   heavier than the same value in short segments, most of all on black. */
+.rail {
+  background-color: hsl(var(--border) / var(--rail-alpha));
+}
+
+.divider {
+  border-color: hsl(var(--border) / var(--rail-alpha));
 }

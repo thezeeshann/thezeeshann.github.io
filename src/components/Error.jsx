@@ -2,15 +2,16 @@ import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
-    <div className="flex flex-col min-h-screen py-10 mt-20 text-center text-textSecondary dark:text-darkTextSecondary gap-y-5">
-      <p className="text-base">
-        {" "}
-        A 404 error occured! Page not found, check the URL and try again.
+    <div className="flex min-h-screen flex-col items-center justify-center gap-3 px-4 text-center">
+      <p className="text-sm font-bold uppercase tracking-wider text-muted">
+        404
       </p>
-      <Link to="/">
-        <span className="text-base cursor-pointer hover:text-primary">
-          Go Back
-        </span>
+      <p className="text-lg font-bold tracking-tight">This page doesn&apos;t exist.</p>
+      <Link
+        to="/"
+        className="mt-2 rounded-lg hairline px-3.5 py-1.5 text-[11px] text-muted transition-colors hover:bg-subtle hover:text-fg"
+      >
+        Go back
       </Link>
     </div>
   );

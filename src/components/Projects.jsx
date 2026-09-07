@@ -1,65 +1,52 @@
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiGlobe } from "react-icons/fi";
 import { projects } from "../lib/data";
-import { Link } from "react-router-dom";
-import { TfiWorld } from "react-icons/tfi";
 
 const Projects = () => {
   return (
-    <section className="mt-8 mb-10 " id="project">
-      <div className="flex flex-col mb-6 gap-y-2">
-        <h1 className="text-xl font-semibold text-textPrimary dark:text-darkTextPrimary ">
-          Projects
-        </h1>
-      </div>
-
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-1">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="p-4 border-[1px] border-bgSecondary dark:border-darkBgSecondary shadow-md"
-          >
-            <div className="flex flex-col gap-y-2">
-              <div className="flex flex-row items-center justify-between ">
-                <p className="font-semibold text-[15px] text-textPrimary dark:text-darkTextPrimary">
-                  {project.name}
-                </p>
-                <div className="flex flex-row items-center gap-x-2 text-textSecondary dark:text-darkTextSecondary">
-                  <Link to={project.github} target="_blank">
-                    <FiGithub
-                      size={20}
-                      className="cursor-pointer hover:scale-90"
-                    />
-                  </Link>
-                  {project.live && (
-                    <Link to={project.live} target="_blank">
-                      <TfiWorld
-                        size={20}
-                        className="cursor-pointer hover:scale-90"
-                      />
-                    </Link>
-                  )}
-                </div>
-              </div>
-              <p className="text-[12px] text-textSecondary dark:text-darkTextSecondary">
-                {project.description}
-              </p>
-              <div className="flex flex-row flex-wrap items-center gap-x-2 gap-y-2">
-                {project?.techstacks?.map((stack) => (
-                  <div
-                    key={stack.id}
-                    className="py-1 px-2 border-[1px] rounded-md border-bgSecondary dark:border-darkBgSecondary cursor-pointer hover:animate-pulse"
-                  >
-                    <p className="text-[12px] font-semibold text-textSecondary dark:text-darkTextSecondary">
-                      {stack.name}
-                    </p>
-                  </div>
-                ))}
-              </div>
+    <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          className="flex flex-col rounded-md hairline p-3 transition-colors hover:bg-subtle"
+        >
+          <div className="flex items-start justify-between gap-2">
+            <p className="text-sm font-semibold tracking-tight">
+              {project.name}
+            </p>
+            <div className="flex shrink-0 items-center gap-2 text-muted">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${project.name} — GitHub repository`}
+                className="transition-colors hover:text-fg"
+              >
+                <FiGithub size={14} />
+              </a>
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${project.name} — live site`}
+                  className="transition-colors hover:text-fg"
+                >
+                  <FiGlobe size={14} />
+                </a>
+              )}
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+
+          <p className="mt-1.5 text-xs leading-relaxed text-muted">
+            {project.description}
+          </p>
+
+          <p className="mt-auto pt-2.5 text-[11px] text-muted">
+            {project.techstacks.join(" · ")}
+          </p>
+        </div>
+      ))}
+    </div>
   );
 };
 
