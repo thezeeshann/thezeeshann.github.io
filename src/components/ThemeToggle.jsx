@@ -1,13 +1,22 @@
+import { useRef } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
+import { playClick } from "../lib/sounds";
 import { useTheme } from "../lib/useTheme";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
+  const buttonRef = useRef(null);
+
+  const handleClick = () => {
+    playClick();
+    toggleTheme(buttonRef.current);
+  };
 
   return (
     <button
+      ref={buttonRef}
       type="button"
-      onClick={toggleTheme}
+      onClick={handleClick}
       aria-label="Toggle color theme"
       title={theme === "dark" ? "Switch to light" : "Switch to dark"}
       className="flex h-8 w-8 items-center justify-center rounded-full hairline text-muted transition-colors hover:bg-subtle hover:text-fg"

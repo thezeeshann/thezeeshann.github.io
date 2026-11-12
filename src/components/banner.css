@@ -1,0 +1,222 @@
+/* Day palette (light theme). */
+.banner-scene {
+  --bn-sky-top: #9fd3f5;
+  --bn-sky-bottom: #fde9d4;
+  --bn-glow: #ffe2a0;
+  --bn-body: #ffcf6e;
+  --bn-cloud: #ffffff;
+  --bn-bird: #3d4a5c;
+  --bn-far: #b9cbe2;
+  --bn-mid: #8fa9c9;
+  --bn-water: #a6cfee;
+  --bn-shimmer: #ffffff;
+  --bn-trees: #45626b;
+}
+
+/* Night palette (dark theme). */
+.dark .banner-scene {
+  --bn-sky-top: #060a1e;
+  --bn-sky-bottom: #2a2b5e;
+  --bn-glow: #a9b8ff;
+  --bn-body: #f4efdc;
+  --bn-far: #2b3063;
+  --bn-mid: #1b1f47;
+  --bn-water: #121838;
+  --bn-shimmer: #c9d4ff;
+  --bn-trees: #0b0e2a;
+}
+
+.bn-sky-top {
+  stop-color: var(--bn-sky-top);
+}
+.bn-sky-bottom {
+  stop-color: var(--bn-sky-bottom);
+}
+.bn-glow-stop {
+  stop-color: var(--bn-glow);
+}
+.bn-sun,
+.bn-moon {
+  fill: var(--bn-body);
+}
+.bn-far {
+  fill: var(--bn-far);
+}
+.bn-mid {
+  fill: var(--bn-mid);
+}
+.bn-water {
+  fill: var(--bn-water);
+}
+.bn-trees {
+  fill: var(--bn-trees);
+}
+.bn-clouds {
+  fill: var(--bn-cloud);
+  opacity: 0.9;
+}
+.bn-star {
+  fill: #fff;
+}
+.bn-bird {
+  fill: none;
+  stroke: var(--bn-bird);
+  stroke-width: 0.6;
+  stroke-linecap: round;
+}
+.bn-reflect,
+.bn-shimmer {
+  fill: var(--bn-shimmer);
+}
+
+/* Day/night swap. */
+.bn-night {
+  display: none;
+}
+.dark .bn-night {
+  display: inline;
+}
+.dark .bn-day {
+  display: none;
+}
+
+/* Motion. CSS lengths inside SVG are user units of the viewBox. */
+.bn-star {
+  animation: bn-twinkle 3s ease-in-out infinite;
+}
+@keyframes bn-twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.bn-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bn-pulse 6s ease-in-out infinite;
+}
+@keyframes bn-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+.bn-cloud {
+  animation: bn-drift 80s linear infinite;
+}
+@keyframes bn-drift {
+  from {
+    transform: translateX(-40px);
+  }
+  to {
+    transform: translateX(540px);
+  }
+}
+
+.bn-birds {
+  animation: bn-fly 28s linear infinite;
+  animation-delay: -6s;
+}
+@keyframes bn-fly {
+  0% {
+    transform: translate(520px, 30px);
+  }
+  50% {
+    transform: translate(240px, 22px);
+  }
+  100% {
+    transform: translate(-40px, 28px);
+  }
+}
+
+.bn-bird {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bn-flap 0.7s ease-in-out infinite alternate;
+}
+@keyframes bn-flap {
+  to {
+    transform: scaleY(0.35);
+  }
+}
+
+.bn-shooting {
+  opacity: 0;
+  animation: bn-shoot 9s ease-in infinite;
+  animation-delay: 1.5s;
+}
+.bn-shooting-2 {
+  animation-delay: 6s;
+}
+@keyframes bn-shoot {
+  0% {
+    transform: translate(330px, 6px);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  9% {
+    transform: translate(220px, 44px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(220px, 44px);
+    opacity: 0;
+  }
+}
+.bn-shooting-2 {
+  animation-name: bn-shoot-2;
+}
+@keyframes bn-shoot-2 {
+  0% {
+    transform: translate(170px, 4px);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  8% {
+    transform: translate(80px, 34px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(80px, 34px);
+    opacity: 0;
+  }
+}
+
+.bn-reflect,
+.bn-shimmer {
+  animation: bn-glint 2.4s ease-in-out infinite;
+}
+@keyframes bn-glint {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(1.5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-scene * {
+    animation: none !important;
+  }
+  .bn-shooting {
+    display: none;
+  }
+}

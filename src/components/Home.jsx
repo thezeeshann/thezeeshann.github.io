@@ -1,3 +1,4 @@
+import Banner from "./Banner";
 import Contributions from "./Contributions";
 import Experience from "./Experience";
 import Footer from "./Footer";
@@ -9,10 +10,13 @@ import Skills from "./Skills";
 const Home = () => {
   return (
     <main
-      className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-4 pb-16 pt-16"
+      className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-4 pb-16 pt-16 sm:pt-10"
       id="home"
     >
-      <Profile />
+      <div className="flex flex-col gap-6">
+        <Banner />
+        <Profile />
+      </div>
       <Contributions />
 
       <Section label="Experience" id="experience">

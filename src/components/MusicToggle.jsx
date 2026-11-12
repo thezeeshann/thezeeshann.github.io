@@ -1,5 +1,6 @@
 import { FiExternalLink, FiPause, FiPlay } from "react-icons/fi";
 import { music } from "../lib/data";
+import { playClick } from "../lib/sounds";
 import { useYouTubeAudio } from "../lib/useYouTubeAudio";
 
 const buttonClasses =
@@ -31,7 +32,10 @@ const MusicToggle = () => {
     <>
       <button
         type="button"
-        onClick={toggle}
+        onClick={() => {
+          playClick();
+          toggle();
+        }}
         disabled={!ready}
         aria-pressed={playing}
         aria-label={playing ? "Pause music" : `Play ${music.title}`}
@@ -41,11 +45,13 @@ const MusicToggle = () => {
         {playing ? <FiPause size={14} /> : <FiPlay size={14} />}
       </button>
 
-      {/* Off-screen, not display:none — a display-hidden iframe can be
-          refused playback. */}
+      {/* Kept inside the viewport at the 200x200 YouTube asks for, but
+          effectively invisible and click-through. Hiding it with display:none,
+          a 1px box or an off-screen position gets playback refused or
+          throttled. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[-9999px] top-0 h-px w-px opacity-0"
+        className="pointer-events-none fixed bottom-0 right-0 h-[200px] w-[200px] overflow-hidden opacity-[0.01]"
       >
         <div ref={containerRef} />
       </div>

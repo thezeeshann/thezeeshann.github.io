@@ -53,7 +53,14 @@ export const useYouTubeAudio = (videoId) => {
 
         playerRef.current = new YT.Player(containerRef.current, {
           videoId,
+          // YouTube's embed policy asks for at least 200x200; a 1px player
+          // is throttled or refused by some browsers.
+          width: 200,
+          height: 200,
           playerVars: {
+            origin: window.location.origin,
+            fs: 0,
+            rel: 0,
             // `playlist` set to the same id is what makes a single video loop;
             // `loop: 1` alone does nothing.
             loop: 1,
@@ -71,7 +78,8 @@ export const useYouTubeAudio = (videoId) => {
               // Track the player's actual state so the button can't desync.
               setPlaying(event.data === YT.PlayerState.PLAYING);
             },
-            onError: () => {
+            onError: (event) => {
+              console.warn("YouTube player error", event.data);
               if (!cancelled) setError(true);
             },
           },
@@ -98,6 +106,7 @@ export const useYouTubeAudio = (videoId) => {
         player.pauseVideo();
       } else {
         player.unMute();
+        player.setVolume(100);
         player.playVideo();
       }
     } catch {

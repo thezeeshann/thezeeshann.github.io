@@ -119,3 +119,12 @@ img {
 .divider {
   border-color: hsl(var(--border) / var(--rail-alpha));
 }
+
+/* Theme switch: the new theme is revealed as a circle (clip-path is animated
+   from script, see ThemeContext). The default cross-fade must be off or it
+   fights the reveal. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}

@@ -113,29 +113,20 @@ export const experience = [
 export const projects = [
   {
     id: 1,
+    name: "Sweepr",
+    description:
+      "Monitor, clean, analyze and maintain your Mac from the terminal — a live system dashboard, deep cleaner, disk analyzer, smart uninstaller and maintenance tasks in one small Rust binary.",
+    techstacks: ["Rust", "Ratatui", "Clap", "sysinfo", "macOS"],
+    github: "https://github.com/thezeeshann/sweepr",
+  },
+  {
+    id: 2,
     name: "Habitly",
     description:
       "A clean, free, no-account habit tracker for macOS. Track daily habits with streaks, a weekly grid, and progress graphs — all data stays local on-device, no account or network calls required.",
     techstacks: ["Electron", "Vite", "TypeScript", "React 19", "electron-store"],
     github: "https://github.com/thezeeshann/habitly",
     live: "https://habitly-6mv4.vercel.app/",
-  },
-  {
-    id: 2,
-    name: "Workout CMS",
-    description:
-      "A content management system for tracking and organizing workouts, with authentication, a PostgreSQL database, and a modern component-driven UI.",
-    techstacks: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Drizzle ORM",
-      "PostgreSQL",
-      "Better Auth",
-      "React Query",
-      "shadcn/ui",
-    ],
-    github: "https://github.com/thezeeshann/workout-cms",
   },
   {
     id: 3,
@@ -154,23 +145,5 @@ export const projects = [
       "Uploadthing",
     ],
     github: "https://github.com/thezeeshann/testimonial",
-  },
-  {
-    id: 4,
-    name: "Ecommerce Application",
-    description:
-      "A full-featured ecommerce web application built on the MERN stack, with cart, catalog, and order flows.",
-    techstacks: [
-      "React.js",
-      "JavaScript",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Redux",
-      "RTK Query",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-    ],
-    github: "https://github.com/thezeeshann/ecommerce-mern",
   },
 ];
